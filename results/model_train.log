@@ -255,3 +255,70 @@ Max num of run: 1
 Keep Prob: 0.8656542586183774
 Current time : 2023-07-24 16:22:44 KST
 Epoch    1, Train ACC: 0.68932, Train AUC: 0.71077, Train Loss: 0.65711
+Network Configuration:
+batch_size: 32
+hidden_layer_structure: [102]
+learning_rate: 0.004155923499457689
+keep_prob: 0.8656542586183774
+rnn_cell: <class 'keras.layers.legacy_rnn.rnn_cell_impl.LSTMCell'>
+max_grad_norm: 5.0
+lambda_w1: 0.03
+lambda_w2: 3.0
+lambda_o: 0.1
+Num of problems: 1865
+Num of run: 1
+Max num of run: 2
+Keep Prob: 0.8656542586183774
+Network Configuration:
+batch_size: 32
+hidden_layer_structure: [102]
+learning_rate: 0.004155923499457689
+keep_prob: 0.8656542586183774
+rnn_cell: <class 'keras.layers.legacy_rnn.rnn_cell_impl.LSTMCell'>
+max_grad_norm: 5.0
+lambda_w1: 0.03
+lambda_w2: 3.0
+lambda_o: 0.1
+Num of problems: 1865
+Num of run: 1
+Max num of run: 2
+Keep Prob: 0.8656542586183774
+Current time : 2023-07-24 19:34:33 KST
+Epoch    1, Train ACC: 0.69068, Train AUC: 0.71335, Train Loss: 0.65559
+Epoch    1, Valid ACC: 0.7576, Valid AUC: 0.78077, Valid AUC Curr: 0.90277, Valid Loss: 0.60071*
+Epoch    1, Test ACC: 0.75716, Test AUC: 0.78145, Test AUC Curr: 0.90249, Test Loss: 0.60171
+w_l1: 0.009419443869704353, w_l2: 0.020277395086332698
+m1: 0.2987849602959467, m2: 0.024401891781956814. Saving the model
+time used for this epoch: 1474.2968752384186s
+***********
+Current time : 2023-07-24 19:59:07 KST
+Epoch    2, Train ACC: 0.7526, Train AUC: 0.79126, Train Loss: 0.56705
+Epoch    2, Valid ACC: 0.79458, Valid AUC: 0.81534, Valid AUC Curr: 0.937, Valid Loss: 0.50979*
+Epoch    2, Test ACC: 0.79376, Test AUC: 0.8171, Test AUC Curr: 0.93754, Test Loss: 0.51016
+w_l1: 0.013344380615062823, w_l2: 0.028613648824043256
+m1: 0.3580965440996694, m2: 0.045427346868032806. Saving the model
+time used for this epoch: 1491.6320431232452s
+***********
+The best validation result occured at: 2-th epoch, with validation ACC: 0.79458 and AUC: 0.81534
+The best testing result occured at: 2-th epoch, with testing ACC: 0.79376 and AUC: 0.8171
+*********************************
+average validation ACC for 1 runs: 0.7945780314868557
+average validation AUC for 1 runs: 0.8153394509625193
+average validation AUC Current for 1 runs: 0.9370032269456691
+
+average waviness-l1 for 1 runs: 0.013344380615062823
+average waviness-l2 for 1 runs: 0.028613648824043256
+average consistency_m1 for 1 runs: 0.3580965440996694
+average consistency_m1 for 1 runs: 0.045427346868032806
+
+test ACC for 1 runs : [0.7937616305761056]
+test AUC for 1 runs : [0.8170952063758481]
+
+average test ACC for 1 runs: 0.7937616305761056
+average test AUC for 1 runs: 0.8170952063758481
+average test AUC Current for 1 runs: 0.937538881716196
+
+latex: 
+cell_type & num. layer & layer_structure & learning rate & keep prob. & $\lambda_o$ & $\lambda_{w_1}$ & $\lambda_{w_2}$ & Avg. ACC(N) & Avg. AUC(N) & Avg. AUC(C) & Avg. $w_1$ & Avg. $w_2$ & Avg. $m_1$ & Avg. $m_2$\\ 
+LSTM & 1 & 102 & 0.0042 & 0.8657 & 0.1000 & 0.0300 & 3.0000 & 0.7945780314868557 $\pm$ 0.0 & 0.8153394509625193 $\pm$ 0.0 & 0.9370032269456691 $\pm$ 0.0 & 0.013344380615062823 $\pm$ 0.0 & 0.028613648824043256 $\pm$ 0.0 & 0.3580965440996694 $\pm$ 0.0 & 0.045427346868032806 $\pm$ 0.0\\ 
+
