@@ -172,12 +172,14 @@ class DKTData:
             self.students_train, self.students_valid, self.students_test = train_data, valid_data, test_data
             num_set, max_seq_len = [], 0
             for data in [self.students_train, self.students_valid, self.students_test]:
-                for userid, probs, corrects in data:
-                    num_set.append(list(probs))
+                for userid, corrects, tags in data:
+                    num_set.extend(list(tags))
                     if len(corrects) > max_seq_len:
                         max_seq_len = len(corrects)
             self.num_problems = len(set(num_set))
             self.max_seq_length = max_seq_len
+            print('The number of problems is {}'.format(self.num_problems))
+            print('The max sequence length is {}'.format(self.max_seq_length))
 
         problem_seqs = [student[1] for student in self.students_train]
         correct_seqs = [student[2] for student in self.students_train]

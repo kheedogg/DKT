@@ -55,12 +55,13 @@ class Model(object):
                 cell = self.rnn_cell(num_units=layer_state_size)
                 # cell = tf.contrib.rnn.DropoutWrapper(cell, output_keep_prob=self.keep_prob)
                 cell = tf.compat.v1.nn.rnn_cell.DropoutWrapper(cell, output_keep_prob=self.keep_prob)
-                outputs, state = tf.nn.dynamic_rnn(
-                    cell,
-                    hidden_layer_input,
-                    dtype=tf.float32,
-                    sequence_length=self.seq_length
-                )
+                # outputs, state = tf.nn.dynamic_rnn(
+                #     cell,
+                #     hidden_layer_input,
+                #     dtype=tf.float32,
+                #     sequence_length=self.seq_length
+                # )
+                outputs, state = tf.keras.layers.RNN(cell)(hidden_layer_input)
             self.hidden_layers_outputs.append(outputs)
             self.hidden_layers_state.append(state)
             hidden_layer_input = outputs
