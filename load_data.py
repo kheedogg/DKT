@@ -160,8 +160,7 @@ def read_data_from_csv(filename):
 
 
 class DKTData:
-    def __init__(self, train_path='', valid_path='', test_path='', batch_size=32,
-                 raw_data_type='csv', train_data=None, valid_data=None, test_data=None):
+    def __init__(self, train_path='', valid_path='', test_path='', batch_size=32, raw_data_type='csv', train_data=None, valid_data=None, test_data=None):
         if raw_data_type == 'csv':
             self.students_train, num_problems_train, max_seq_length_train = read_data_from_csv(train_path)
             self.students_valid, num_problems_valid, max_seq_length_valid = read_data_from_csv(valid_path)
