@@ -8,7 +8,8 @@ def pad(data, target_length, target_value=0):
 
 def one_hot(indices, depth):
     encoding = np.concatenate((np.eye(depth), [np.zeros(depth)]))
-    indices[indices!=-1] -= 1
+    # indices[indices!=-1] -= 1 # error인듯함. indices!=-1의 값은 True(=1)로 반환되고, 무조건 두번째 값을 -1 하도록 오류가 존재함.
+    indices = [ e-1 if e!=-1 else e for e in indices ]
     return encoding[indices]
 
 
