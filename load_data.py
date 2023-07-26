@@ -160,12 +160,22 @@ def read_data_from_csv(filename):
 
 
 class DKTData:
-    def __init__(self, train_path, valid_path, test_path, batch_size=32):
-        self.students_train, num_problems_train, max_seq_length_train = read_data_from_csv(train_path)
-        self.students_valid, num_problems_valid, max_seq_length_valid = read_data_from_csv(valid_path)
-        self.students_test, num_problems_test, max_seq_length_test = read_data_from_csv(test_path)
-        self.num_problems = max(num_problems_test, num_problems_train, num_problems_valid)
-        self.max_seq_length = max(max_seq_length_train, max_seq_length_test, max_seq_length_valid)
+    def __init__(self, train_path='', valid_path='', test_path='', batch_size=32, raw_data_type='csv', datasets=None):
+        if raw_data_type == 'csv':
+            self.students_train, num_problems_train, max_seq_length_train = read_data_from_csv(train_path)
+            self.students_valid, num_problems_valid, max_seq_length_valid = read_data_from_csv(valid_path)
+            self.students_test, num_problems_test, max_seq_length_test = read_data_from_csv(test_path)
+            self.num_problems = max(num_problems_test, num_problems_train, num_problems_valid)
+            self.max_seq_length = max(max_seq_length_train, max_seq_length_test, max_seq_length_valid)
+        else:
+            self.students_train, self.students_valid, self.students_test = datasets.randomSplit([0.6, 0.2, 0.2], seed=123)
+            num_set, max_seq_len = [], 0
+            for userid, probs, corrects in datasets:
+                num_set.append(list(probs))
+                if len(corrects) > max_seq_len:
+                    max_seq_len = len(corrects)
+            self.num_problems = len(set(num_set))
+            self.max_seq_length = max_seq_len
 
         problem_seqs = [student[1] for student in self.students_train]
         correct_seqs = [student[2] for student in self.students_train]
