@@ -7,65 +7,44 @@ First data is ('00025b10-508c-11eb-bdd8-19825bd2ff0a', [10, 9, 10, 10, 10, 8, 3,
 **test**
 The number of data is 24515
 First data is ('00037820-bdf4-11ec-aad8-4fc760357a97', [1, 1, 1, 1, 2, 2, 3, 3, 1, 1, 1, 1, 2, 3, 3, 3], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
-Current time : 2023-08-01 19:40:26 KST, TensorFlow version :2.6.0
-Current time : 2023-08-01 19:40:26 KST,  OS infromation :Linux
-Current time : 2023-08-01 19:40:26 KST, OS version :#44~20.04.1-Ubuntu SMP Thu Jun 22 12:21:12 UTC 2023
-Current time : 2023-08-01 19:40:26 KST,  Process information :x86_64
-Current time : 2023-08-01 19:40:26 KST,  CPU_count :4
-Current time : 2023-08-01 19:40:26 KST,  RAM_size :11(GB)
+Current time : 2023-08-01 21:51:23 KST, TensorFlow version :2.6.0
+Current time : 2023-08-01 21:51:23 KST,  OS infromation :Linux
+Current time : 2023-08-01 21:51:23 KST, OS version :#44~20.04.1-Ubuntu SMP Thu Jun 22 12:21:12 UTC 2023
+Current time : 2023-08-01 21:51:23 KST,  Process information :x86_64
+Current time : 2023-08-01 21:51:23 KST,  CPU_count :4
+Current time : 2023-08-01 21:51:23 KST,  RAM_size :11(GB)
 The number of problems is 40
 The max sequence length is 4384
 Epoch 1/10
-- Training Loss: 0.4513
-- Training Accuracy: 0.2188
-- Validation Loss: 0.4199
-- Validation Accuracy: 0.0646
+- Training Loss: 0.1469 - Training Accuracy: 0.2339
+- Validation Loss: 0.1687 - Validation Accuracy: 0.3397
 Epoch 2/10
-- Training Loss: 0.4284
-- Training Accuracy: 0.4133
-- Validation Loss: 0.4063
-- Validation Accuracy: 0.1158
+- Training Loss: 0.2297 - Training Accuracy: 0.5077
+- Validation Loss: 0.2088 - Validation Accuracy: 0.4691
 Epoch 3/10
-- Training Loss: 0.4151
-- Training Accuracy: 0.4619
-- Validation Loss: 0.4037
-- Validation Accuracy: 0.1431
+- Training Loss: 0.2133 - Training Accuracy: 0.4885
+- Validation Loss: 0.2181 - Validation Accuracy: 0.5055
 Epoch 4/10
-- Training Loss: 0.4114
-- Training Accuracy: 0.5227
-- Validation Loss: 0.4030
-- Validation Accuracy: 0.1547
+- Training Loss: 0.2594 - Training Accuracy: 0.6129
+- Validation Loss: 0.2418 - Validation Accuracy: 0.5720
 Epoch 5/10
-- Training Loss: 0.4094
-- Training Accuracy: 0.5529
-- Validation Loss: 0.4025
-- Validation Accuracy: 0.1598
+- Training Loss: 0.2915 - Training Accuracy: 0.6990
+- Validation Loss: 0.3400 - Validation Accuracy: 0.8217
 Epoch 6/10
-- Training Loss: 0.4084
-- Training Accuracy: 0.5651
-- Validation Loss: 0.4023
-- Validation Accuracy: 0.1625
+- Training Loss: 0.3160 - Training Accuracy: 0.7631
+- Validation Loss: 0.2921 - Validation Accuracy: 0.7043
 Epoch 7/10
-- Training Loss: 0.4078
-- Training Accuracy: 0.5715
-- Validation Loss: 0.4022
-- Validation Accuracy: 0.1643
+- Training Loss: 0.2801 - Training Accuracy: 0.6756
+- Validation Loss: 0.2683 - Validation Accuracy: 0.6466
 Epoch 8/10
-- Training Loss: 0.4074
-- Training Accuracy: 0.5751
-- Validation Loss: 0.4021
-- Validation Accuracy: 0.1653
+- Training Loss: 0.3174 - Training Accuracy: 0.7701
+- Validation Loss: 0.3422 - Validation Accuracy: 0.8324
 Epoch 9/10
-- Training Loss: 0.4071
-- Training Accuracy: 0.5783
-- Validation Loss: 0.4020
-- Validation Accuracy: 0.1659
+- Training Loss: 0.3211 - Training Accuracy: 0.7801
+- Validation Loss: 0.3441 - Validation Accuracy: 0.8379
 Epoch 10/10
-- Training Loss: 0.4070
-- Training Accuracy: 0.5805
-- Validation Loss: 0.4020
-- Validation Accuracy: 0.1665
+- Training Loss: 0.3310 - Training Accuracy: 0.8058
+- Validation Loss: 0.3438 - Validation Accuracy: 0.8376
 20230801results/model.h5 model successfully saved! :)
-program run for: 2126.8959765434265s
-- Test Loss: 0.4068
-- Test Accuracy: 0.5762
+program run for: 1355.4031162261963s
+20230801results/loss_accuracy_graph.png image successfully saved! :)
