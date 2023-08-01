@@ -171,7 +171,7 @@ class DKTData:
             self.students_train, self.students_valid, self.students_test = train_data, valid_data, test_data
             num_set, max_seq_len = [], 0
             for data in [self.students_train, self.students_valid, self.students_test]:
-                for userid, corrects, tags in data:
+                for userid, tags, corrects in data:
                     num_set.extend(list(tags))
                     if len(corrects) > max_seq_len:
                         max_seq_len = len(corrects)
