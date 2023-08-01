@@ -1,0 +1,71 @@
+**train**
+The number of data is 74248
+First data is ('000120a0-eee8-11ec-8b96-254279cd1714', [7, 7, 7, 7, 8, 3, 3, 3, 8, 9, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 8, 10, 3, 9, 10, 9, 10, 10, 10, 10, 3, 8, 3, 3, 8], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+**valid**
+The number of data is 24736
+First data is ('00025b10-508c-11eb-bdd8-19825bd2ff0a', [10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 8, 10, 3, 9, 10, 9, 10, 10, 10, 10, 3, 8, 3, 3, 8, 10, 10, 10, 10, 8, 8, 3, 8, 9, 9, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 3, 8, 10, 9, 10, 9, 10, 10, 10, 8, 3, 13, 13, 9, 10, 10, 10, 10, 12, 13, 3, 14, 14, 9, 15, 15, 15, 15, 8, 3, 3, 8, 3, 9, 15, 15, 15, 15, 8, 3, 3, 8, 3, 16, 15, 15, 15, 15, 8, 3, 8, 8, 8, 16, 18, 18, 18, 18, 8, 6, 6, 8, 8, 16, 18, 18, 18, 18, 8, 8, 8, 6, 19, 16, 18, 18, 18, 18, 8, 3, 8, 6, 3, 9, 15, 15, 15, 15, 8, 3, 8, 8, 15, 9], [1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+**test**
+The number of data is 24515
+First data is ('00037820-bdf4-11ec-aad8-4fc760357a97', [1, 1, 1, 1, 2, 2, 3, 3, 1, 1, 1, 1, 2, 3, 3, 3], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+Current time : 2023-08-01 19:40:26 KST, TensorFlow version :2.6.0
+Current time : 2023-08-01 19:40:26 KST,  OS infromation :Linux
+Current time : 2023-08-01 19:40:26 KST, OS version :#44~20.04.1-Ubuntu SMP Thu Jun 22 12:21:12 UTC 2023
+Current time : 2023-08-01 19:40:26 KST,  Process information :x86_64
+Current time : 2023-08-01 19:40:26 KST,  CPU_count :4
+Current time : 2023-08-01 19:40:26 KST,  RAM_size :11(GB)
+The number of problems is 40
+The max sequence length is 4384
+Epoch 1/10
+- Training Loss: 0.4513
+- Training Accuracy: 0.2188
+- Validation Loss: 0.4199
+- Validation Accuracy: 0.0646
+Epoch 2/10
+- Training Loss: 0.4284
+- Training Accuracy: 0.4133
+- Validation Loss: 0.4063
+- Validation Accuracy: 0.1158
+Epoch 3/10
+- Training Loss: 0.4151
+- Training Accuracy: 0.4619
+- Validation Loss: 0.4037
+- Validation Accuracy: 0.1431
+Epoch 4/10
+- Training Loss: 0.4114
+- Training Accuracy: 0.5227
+- Validation Loss: 0.4030
+- Validation Accuracy: 0.1547
+Epoch 5/10
+- Training Loss: 0.4094
+- Training Accuracy: 0.5529
+- Validation Loss: 0.4025
+- Validation Accuracy: 0.1598
+Epoch 6/10
+- Training Loss: 0.4084
+- Training Accuracy: 0.5651
+- Validation Loss: 0.4023
+- Validation Accuracy: 0.1625
+Epoch 7/10
+- Training Loss: 0.4078
+- Training Accuracy: 0.5715
+- Validation Loss: 0.4022
+- Validation Accuracy: 0.1643
+Epoch 8/10
+- Training Loss: 0.4074
+- Training Accuracy: 0.5751
+- Validation Loss: 0.4021
+- Validation Accuracy: 0.1653
+Epoch 9/10
+- Training Loss: 0.4071
+- Training Accuracy: 0.5783
+- Validation Loss: 0.4020
+- Validation Accuracy: 0.1659
+Epoch 10/10
+- Training Loss: 0.4070
+- Training Accuracy: 0.5805
+- Validation Loss: 0.4020
+- Validation Accuracy: 0.1665
+20230801results/model.h5 model successfully saved! :)
+program run for: 2126.8959765434265s
+- Test Loss: 0.4068
+- Test Accuracy: 0.5762
