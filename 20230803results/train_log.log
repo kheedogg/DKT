@@ -1,0 +1,66 @@
+**train**
+The number of data is 74248
+First data is ('000120a0-eee8-11ec-8b96-254279cd1714', [7, 7, 7, 7, 8, 3, 3, 3, 8, 9, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 8, 10, 3, 9, 10, 9, 10, 10, 10, 10, 3, 8, 3, 3, 8], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+**valid**
+The number of data is 24736
+First data is ('00025b10-508c-11eb-bdd8-19825bd2ff0a', [10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 8, 10, 3, 9, 10, 9, 10, 10, 10, 10, 3, 8, 3, 3, 8, 10, 10, 10, 10, 8, 8, 3, 8, 9, 9, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 3, 8, 10, 9, 10, 9, 10, 10, 10, 8, 3, 13, 13, 9, 10, 10, 10, 10, 12, 13, 3, 14, 14, 9, 15, 15, 15, 15, 8, 3, 3, 8, 3, 9, 15, 15, 15, 15, 8, 3, 3, 8, 3, 16, 15, 15, 15, 15, 8, 3, 8, 8, 8, 16, 18, 18, 18, 18, 8, 6, 6, 8, 8, 16, 18, 18, 18, 18, 8, 8, 8, 6, 19, 16, 18, 18, 18, 18, 8, 3, 8, 6, 3, 9, 15, 15, 15, 15, 8, 3, 8, 8, 15, 9], [1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+**test**
+The number of data is 24515
+First data is ('00037820-bdf4-11ec-aad8-4fc760357a97', [1, 1, 1, 1, 2, 2, 3, 3, 1, 1, 1, 1, 2, 3, 3, 3], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+Current time : 2023-08-03 15:47:52 KST, TensorFlow version :2.6.0
+Current time : 2023-08-03 15:47:52 KST,  OS infromation :Linux
+Current time : 2023-08-03 15:47:52 KST, OS version :#44~20.04.1-Ubuntu SMP Thu Jun 22 12:21:12 UTC 2023
+Current time : 2023-08-03 15:47:52 KST,  Process information :x86_64
+Current time : 2023-08-03 15:47:52 KST,  CPU_count :4
+Current time : 2023-08-03 15:47:52 KST,  RAM_size :11(GB)
+The number of problems is 40
+The max sequence length is 4384
+Epoch 1/10
+- Training Loss: 0.5677 - Training Accuracy: 0.3844
+- Validation Loss: 0.5288 - Validation Accuracy: 0.5622
+Epoch 2/10
+- Training Loss: 0.4854 - Training Accuracy: 0.5214
+- Validation Loss: 0.4381 - Validation Accuracy: 0.4537
+Epoch 3/10
+- Training Loss: 0.4342 - Training Accuracy: 0.4572
+- Validation Loss: 0.4288 - Validation Accuracy: 0.4616
+Epoch 4/10
+- Training Loss: 0.4230 - Training Accuracy: 0.4671
+- Validation Loss: 0.4196 - Validation Accuracy: 0.4719
+Epoch 5/10
+- Training Loss: 0.4378 - Training Accuracy: 0.5382
+- Validation Loss: 0.4692 - Validation Accuracy: 0.6354
+Epoch 1/10
+- Training Loss: 0.4113 - Training Accuracy: 0.5080
+- Validation Loss: 0.4048 - Validation Accuracy: 0.4985
+Epoch 2/10
+- Training Loss: 0.4125 - Training Accuracy: 0.5312
+- Validation Loss: 0.3974 - Validation Accuracy: 0.5029
+Epoch 3/10
+- Training Loss: 0.4177 - Training Accuracy: 0.5607
+- Validation Loss: 0.3925 - Validation Accuracy: 0.5051
+Epoch 4/10
+- Training Loss: 0.4147 - Training Accuracy: 0.5658
+- Validation Loss: 0.3884 - Validation Accuracy: 0.5083
+Epoch 5/10
+- Training Loss: 0.4213 - Training Accuracy: 0.5934
+- Validation Loss: 0.4497 - Validation Accuracy: 0.6683
+Epoch 6/10
+- Training Loss: 0.4262 - Training Accuracy: 0.6113
+- Validation Loss: 0.3863 - Validation Accuracy: 0.5076
+Epoch 7/10
+- Training Loss: 0.4257 - Training Accuracy: 0.6159
+- Validation Loss: 0.4474 - Validation Accuracy: 0.6813
+Epoch 8/10
+- Training Loss: 0.4224 - Training Accuracy: 0.6190
+- Validation Loss: 0.4435 - Validation Accuracy: 0.6743
+Epoch 9/10
+- Training Loss: 0.4142 - Training Accuracy: 0.6023
+- Validation Loss: 0.3752 - Validation Accuracy: 0.5130
+Epoch 10/10
+- Training Loss: 0.4081 - Training Accuracy: 0.5931
+- Validation Loss: 0.3756 - Validation Accuracy: 0.5106
+20230803results/model.h5 model successfully saved! :)
+program run for: 2113.5079407691956s
+- Test Loss: 0.3723 - Test Accuracy: 0.5066
+- Test Problem Accuracy: 0.5357 - Test Correct Accuracy: 0.4775
