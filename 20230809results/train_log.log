@@ -311,3 +311,83 @@ Epoch 118/100000
 921/921 [==============================] - 24s 27ms/step - loss: 0.3910 - dense_1_loss: 0.0593 - dense_2_loss: 0.1149 - dense_3_loss: 0.2168 - dense_1_accuracy: 0.9804 - dense_2_accuracy: 0.9657 - dense_3_accuracy: 0.9081 - val_loss: 0.3963 - val_dense_1_loss: 0.0604 - val_dense_2_loss: 0.1179 - val_dense_3_loss: 0.2180 - val_dense_1_accuracy: 0.9804 - val_dense_2_accuracy: 0.9655 - val_dense_3_accuracy: 0.9080
 Epoch 119/100000
 921/921 [==============================] - 23s 25ms/step - loss: 0.3910 - dense_1_loss: 0.0593 - dense_2_loss: 0.1149 - dense_3_loss: 0.2168 - dense_1_accuracy: 0.9804 - dense_2_accuracy: 0.9657 - dense_3_accuracy: 0.9081 - val_loss: 0.3956 - val_dense_1_loss: 0.0604 - val_dense_2_loss: 0.1180 - val_dense_3_loss: 0.2172 - val_dense_1_accuracy: 0.9803 - val_dense_2_accuracy: 0.9654 - val_dense_3_accuracy: 0.9080
+Model: "model_1"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ input_2 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ embedding (Embedding)          (None, 99, 8)        328         ['input_1[0][0]']                
+                                                                                                  
+ embedding_1 (Embedding)        (None, 99, 32)       59520       ['input_2[0][0]']                
+                                                                                                  
+ input_3 (InputLayer)           [(None, 99, 3)]      0           []                               
+                                                                                                  
+ concatenate (Concatenate)      (None, 99, 43)       0           ['embedding[0][0]',              
+                                                                  'embedding_1[0][0]',            
+                                                                  'input_3[0][0]']                
+                                                                                                  
+ lstm (LSTM)                    (None, 99, 64)       27648       ['concatenate[0][0]']            
+                                                                                                  
+ dense (Dense)                  (None, 99, 128)      8320        ['lstm[0][0]']                   
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 99, 128)     512         ['dense[0][0]']                  
+ alization)                                                                                       
+                                                                                                  
+ activation (Activation)        (None, 99, 128)      0           ['batch_normalization[0][0]']    
+                                                                                                  
+==================================================================================================
+Total params: 96,328
+Trainable params: 0
+Non-trainable params: 96,328
+__________________________________________________________________________________________________
+Model: "model_2"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ input_2 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ input_3 (InputLayer)           [(None, 99, 3)]      0           []                               
+                                                                                                  
+ input_4 (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ model_1 (Functional)           (None, 99, 128)      96328       ['input_1[0][0]',                
+                                                                  'input_2[0][0]',                
+                                                                  'input_3[0][0]']                
+                                                                                                  
+ embedding_1 (Embedding)        multiple             59520       ['input_4[0][0]']                
+                                                                                                  
+ dense_4 (Dense)                (None, 99, 2)        258         ['model_1[0][0]']                
+                                                                                                  
+ flatten (Flatten)              (None, 32)           0           ['embedding_1[1][0]']            
+                                                                                                  
+ flatten_1 (Flatten)            (None, 198)          0           ['dense_4[0][0]']                
+                                                                                                  
+ concatenate_1 (Concatenate)    (None, 230)          0           ['flatten[0][0]',                
+                                                                  'flatten_1[0][0]']              
+                                                                                                  
+ dense_5 (Dense)                (None, 32)           7392        ['concatenate_1[0][0]']          
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 32)          128         ['dense_5[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_1 (Activation)      (None, 32)           0           ['batch_normalization_1[0][0]']  
+                                                                                                  
+ dense_6 (Dense)                (None, 32)           1056        ['activation_1[0][0]']           
+                                                                                                  
+ batch_normalization_2 (BatchNo  (None, 32)          128         ['dense_6[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_2 (Activation)      (None, 32)           0           ['batch_normalization_2[0][0]']  
+                                                                                                  
+ dense_7 (Dense)                (None, 1)            33          ['activation_2[0][0]']           
+                                                                                                  
+==================================================================================================
+Total params: 105,323
+Trainable params: 8,867
+Non-trainable params: 96,456
+__________________________________________________________________________________________________
