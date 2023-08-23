@@ -26,15 +26,6 @@ First data is ('00037820-bdf4-11ec-aad8-4fc760357a97', [1, 1, 1, 1, 1], [1, 2, 3
 Before splitted train length 63031, After splitted train length 6274396
 Before splitted valid length 21077, After splitted valid length 2086611
 Before splitted test length 20731, After splitted test length 2083785
-Start Training...
-Current time : 2023-08-23 16:57:58 KST, TensorFlow version :2.8.2
-Current time : 2023-08-23 16:57:58 KST,  OS infromation :Linux
-Current time : 2023-08-23 16:57:58 KST, OS version :#1 SMP Wed Jun 3 14:28:03 UTC 2020
-Current time : 2023-08-23 16:57:58 KST,  Process information :x86_64
-Current time : 2023-08-23 16:57:58 KST,  CPU_count :16
-Current time : 2023-08-23 16:57:58 KST,  RAM_size :177(GB)
-Finish Traning...
-Current time : 2023-08-23 17:14:01 KST
 **train**
 The number of data is 63087
 First data is ('000120a0-eee8-11ec-8b96-254279cd1714', [7, 7, 7, 7, 8, 3, 3, 3, 8, 9, 7, 7, 7, 7, 8, 3, 3, 3, 8, 9, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 9, 10, 10, 10, 8, 3, 8, 8, 3, 10, 10, 10, 10, 8, 3, 8, 10, 3, 9, 10, 9, 10, 10, 10, 10, 3, 8, 3, 3, 8], [523, 523, 524, 524, 525, 526, 527, 528, 529, 530, 531, 531, 532, 532, 533, 534, 535, 536, 537, 538, 547, 556, 548, 549, 550, 551, 552, 553, 554, 555, 693, 702, 694, 695, 696, 697, 698, 699, 700, 701, 703, 704, 705, 705, 706, 707, 708, 709, 710, 711, 712, 721, 713, 713, 714, 715, 716, 717, 718, 719, 720], [1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6])
@@ -64,11 +55,9 @@ Before splitted train length 63031, After splitted train length 6274396
 Before splitted valid length 21077, After splitted valid length 2086611
 Before splitted test length 20731, After splitted test length 2083785
 Start Training...
-Current time : 2023-08-23 17:34:46 KST, TensorFlow version :2.8.2
-Current time : 2023-08-23 17:34:46 KST,  OS infromation :Linux
-Current time : 2023-08-23 17:34:46 KST, OS version :#1 SMP Wed Jun 3 14:28:03 UTC 2020
-Current time : 2023-08-23 17:34:46 KST,  Process information :x86_64
-Current time : 2023-08-23 17:34:46 KST,  CPU_count :16
-Current time : 2023-08-23 17:34:46 KST,  RAM_size :177(GB)
-Finish Traning...
-Current time : 2023-08-23 20:54:30 KST
+Current time : 2023-08-23 21:09:54 KST, TensorFlow version :2.8.2
+Current time : 2023-08-23 21:09:54 KST,  OS infromation :Linux
+Current time : 2023-08-23 21:09:54 KST, OS version :#1 SMP Wed Jun 3 14:28:03 UTC 2020
+Current time : 2023-08-23 21:09:54 KST,  Process information :x86_64
+Current time : 2023-08-23 21:09:54 KST,  CPU_count :16
+Current time : 2023-08-23 21:09:54 KST,  RAM_size :177(GB)
