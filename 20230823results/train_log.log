@@ -54,6 +54,97 @@ First data is ('00037820-bdf4-11ec-aad8-4fc760357a97', [1, 1, 1, 1, 1], [1, 2, 3
 Before splitted train length 63031, After splitted train length 6274396
 Before splitted valid length 21077, After splitted valid length 2086611
 Before splitted test length 20731, After splitted test length 2083785
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_1 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ input_2 (InputLayer)           [(None, 99)]         0           []                               
+                                                                                                  
+ embedding_1 (Embedding)        (None, 99, 8)        312         ['input_1[0][0]']                
+                                                                                                  
+ embedding (Embedding)          multiple             64768       ['input_2[0][0]',                
+                                                                  'input_4[0][0]']                
+                                                                                                  
+ input_3 (InputLayer)           [(None, 99, 3)]      0           []                               
+                                                                                                  
+ concatenate (Concatenate)      (None, 99, 43)       0           ['embedding_1[0][0]',            
+                                                                  'embedding[0][0]',              
+                                                                  'input_3[0][0]']                
+                                                                                                  
+ lstm (LSTM)                    (None, 99, 128)      88064       ['concatenate[0][0]']            
+                                                                                                  
+ multi_head_attention (MultiHea  (None, 99, 128)     263808      ['lstm[0][0]',                   
+ dAttention)                                                      'lstm[0][0]']                   
+                                                                                                  
+ tf.__operators__.add (TFOpLamb  (None, 99, 128)     0           ['lstm[0][0]',                   
+ da)                                                              'multi_head_attention[0][0]']   
+                                                                                                  
+ layer_normalization (LayerNorm  (None, 99, 128)     256         ['tf.__operators__.add[0][0]']   
+ alization)                                                                                       
+                                                                                                  
+ dropout (Dropout)              (None, 99, 128)      0           ['layer_normalization[0][0]']    
+                                                                                                  
+ dense (Dense)                  (None, 99, 128)      16512       ['dropout[0][0]']                
+                                                                                                  
+ input_4 (InputLayer)           [(None, 1)]          0           []                               
+                                                                                                  
+ dense_5 (Dense)                (None, 99, 2)        258         ['dense[0][0]']                  
+                                                                                                  
+ flatten (Flatten)              (None, 32)           0           ['embedding[1][0]']              
+                                                                                                  
+ flatten_1 (Flatten)            (None, 198)          0           ['dense_5[0][0]']                
+                                                                                                  
+ concatenate_1 (Concatenate)    (None, 230)          0           ['flatten[0][0]',                
+                                                                  'flatten_1[0][0]']              
+                                                                                                  
+ dense_6 (Dense)                (None, 32)           7392        ['concatenate_1[0][0]']          
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 32)          128         ['dense_6[0][0]']                
+ alization)                                                                                       
+                                                                                                  
+ activation_1 (Activation)      (None, 32)           0           ['batch_normalization[0][0]']    
+                                                                                                  
+ dense_7 (Dense)                (None, 32)           1056        ['activation_1[0][0]']           
+                                                                                                  
+ tf.__operators__.add_1 (TFOpLa  (None, 99, 128)     0           ['dropout[0][0]',                
+ mbda)                                                            'dense[0][0]']                  
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 32)          128         ['dense_7[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ layer_normalization_1 (LayerNo  (None, 99, 128)     256         ['tf.__operators__.add_1[0][0]'] 
+ rmalization)                                                                                     
+                                                                                                  
+ activation_2 (Activation)      (None, 32)           0           ['batch_normalization_1[0][0]']  
+                                                                                                  
+ activation (Activation)        (None, 99, 128)      0           ['layer_normalization_1[0][0]']  
+                                                                                                  
+ dense_8 (Dense)                (None, 32)           1056        ['activation_2[0][0]']           
+                                                                                                  
+ dropout_1 (Dropout)            (None, 99, 128)      0           ['activation[0][0]']             
+                                                                                                  
+ batch_normalization_2 (BatchNo  (None, 32)          128         ['dense_8[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dense_1 (Dense)                (None, 99, 128)      16512       ['dropout_1[0][0]']              
+                                                                                                  
+ activation_3 (Activation)      (None, 32)           0           ['batch_normalization_2[0][0]']  
+                                                                                                  
+ dense_2 (Dense)                (None, 99, 39)       5031        ['dense_1[0][0]']                
+                                                                                                  
+ dense_3 (Dense)                (None, 99, 2024)     261096      ['dense_1[0][0]']                
+                                                                                                  
+ dense_4 (Dense)                (None, 99, 3)        387         ['dense_1[0][0]']                
+                                                                                                  
+ dense_9 (Dense)                (None, 1)            33          ['activation_3[0][0]']           
+                                                                                                  
+==================================================================================================
+Total params: 727,181
+Trainable params: 726,989
+Non-trainable params: 192
+__________________________________________________________________________________________________
 Start Training...
 Current time : 2023-08-23 21:09:54 KST, TensorFlow version :2.8.2
 Current time : 2023-08-23 21:09:54 KST,  OS infromation :Linux
