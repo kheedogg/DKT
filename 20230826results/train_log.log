@@ -781,4 +781,6 @@ Final R matrix:
    8.21690372]]
 Final RMSE:
 0.003070759257991221
-CSV file saved successfully.
+CSV file saved successfully.Epoch: 4 ; train cost = 0.0001 ;
+Epoch: 5 ; train cost = 0.0001 ;
+Epoch: 6 ; train cost = 0.0001 ;
