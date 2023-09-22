@@ -4,6 +4,90 @@ First data is ('2a6dad70-8a49-11ed-b776-0f38d08dc0cd', [2, 1, 2, 3, 1, 1, 1, 1, 
 **valid**
 The number of data is 491078
 First data is ('97fde2a0-95f0-11eb-91b8-9bc1a5afa09e', [10, 10, 21, 21, 21, 37, 6, 6, 6, 27, 22, 4, 10, 10, 10, 21, 21, 21, 22, 33, 22, 22, 6, 6, 6, 4, 4, 33, 21, 21, 33, 6, 28, 6, 15, 15, 15, 33, 33, 33, 21, 21, 22, 10, 10, 10, 6, 6, 21, 21, 21, 27, 26, 1, 28, 6, 6, 10, 10, 10, 4, 4, 21, 21, 33, 27, 6, 27, 6, 6, 10, 10, 10, 10, 10, 21, 21, 21, 22, 10, 10, 10, 6, 6, 33, 33, 21, 27, 26, 6, 6, 22, 22, 10, 10, 10, 21, 21, 21, 27], [1387, 1388, 1389, 1390, 1391, 1392, 1393, 1402, 1394, 1395, 1396, 1397, 1398, 1398, 1398, 1399, 1400, 1401, 1443, 1452, 1444, 1445, 1446, 1446, 1446, 1447, 1447, 1448, 1449, 1450, 1451, 1453, 1462, 1454, 1455, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1463, 1464, 1464, 1464, 1465, 1466, 1467, 1468, 1469, 1470, 1471, 1522, 1531, 1523, 1524, 1525, 1525, 1525, 1526, 1526, 1527, 1528, 1529, 1530, 1532, 1541, 1533, 1534, 1535, 1535, 1535, 1536, 1537, 1538, 1539, 1540, 1542, 1543, 1543, 1543, 1544, 1545, 1546, 1547, 1548, 1549, 1550, 1551, 1552, 1553, 1554, 1555, 1555, 1555, 1556, 1557, 1558, 1559], [1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 1608, 1)
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to
+==================================================================================================
+ input_1 (InputLayer)           [(None, 99)]         0           []
+
+ input_2 (InputLayer)           [(None, 99)]         0           []
+
+ embedding_1 (Embedding)        (None, 99, 8)        312         ['input_1[0][0]']
+
+ embedding (Embedding)          multiple             64768       ['input_2[0][0]',
+                                                                  'input_4[0][0]']
+
+ input_3 (InputLayer)           [(None, 99, 3)]      0           []
+
+ concatenate (Concatenate)      (None, 99, 43)       0           ['embedding_1[0][0]',
+                                                                  'embedding[0][0]',
+                                                                  'input_3[0][0]']
+
+ lstm (LSTM)                    (None, 99, 128)      88064       ['concatenate[0][0]']
+
+ multi_head_attention (MultiHea  (None, 99, 128)     263808      ['lstm[0][0]',
+ dAttention)                                                      'lstm[0][0]']
+
+ tf.__operators__.add (TFOpLamb  (None, 99, 128)     0           ['lstm[0][0]',
+ da)                                                              'multi_head_attention[0][0]']
+
+ layer_normalization (LayerNorm  (None, 99, 128)     256         ['tf.__operators__.add[0][0]']
+ alization)
+
+ dropout (Dropout)              (None, 99, 128)      0           ['layer_normalization[0][0]']
+
+ dense (Dense)                  (None, 99, 128)      16512       ['dropout[0][0]']
+
+ input_4 (InputLayer)           [(None, 1)]          0           []
+
+ dense_5 (Dense)                (None, 99, 2)        258         ['dense[0][0]']
+
+ flatten (Flatten)              (None, 32)           0           ['embedding[1][0]']
+
+ flatten_1 (Flatten)            (None, 198)          0           ['dense_5[0][0]']
+
+ concatenate_1 (Concatenate)    (None, 230)          0           ['flatten[0][0]',
+                                                                  'flatten_1[0][0]']
+
+ dense_6 (Dense)                (None, 32)           7392        ['concatenate_1[0][0]']
+
+ tf.__operators__.add_1 (TFOpLa  (None, 99, 128)     0           ['dropout[0][0]',
+ mbda)                                                            'dense[0][0]']
+
+ batch_normalization (BatchNorm  (None, 32)          128         ['dense_6[0][0]']
+ alization)
+
+ layer_normalization_1 (LayerNo  (None, 99, 128)     256         ['tf.__operators__.add_1[0][0]']
+ rmalization)
+
+ activation_1 (Activation)      (None, 32)           0           ['batch_normalization[0][0]']
+
+ activation (Activation)        (None, 99, 128)      0           ['layer_normalization_1[0][0]']
+
+ dense_7 (Dense)                (None, 32)           1056        ['activation_1[0][0]']
+
+ dropout_1 (Dropout)            (None, 99, 128)      0           ['activation[0][0]']
+
+ batch_normalization_1 (BatchNo  (None, 32)          128         ['dense_7[0][0]']
+ rmalization)
+
+ dense_1 (Dense)                (None, 99, 128)      16512       ['dropout_1[0][0]']
+
+ activation_2 (Activation)      (None, 32)           0           ['batch_normalization_1[0][0]']
+
+ dense_2 (Dense)                (None, 99, 39)       5031        ['dense_1[0][0]']
+
+ dense_3 (Dense)                (None, 99, 2024)     261096      ['dense_1[0][0]']
+
+ dense_4 (Dense)                (None, 99, 3)        387         ['dense_1[0][0]']
+
+ dense_8 (Dense)                (None, 1)            33          ['activation_2[0][0]']
+
+==================================================================================================
+Total params: 725,997
+Trainable params: 725,869
+Non-trainable params: 128
+__________________________________________________________________________________________________
 Start Training...
 Current time : 2023-09-20 22:47:08 KST, TensorFlow version :2.8.2
 Current time : 2023-09-20 22:47:08 KST,  OS infromation :Linux
